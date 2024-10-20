@@ -20,6 +20,17 @@ function updateTime() {
     cptDateElement.innerHTML = cptTime.format("MMMM Do YYYY");
     cptTimeElement.innerHTML = cptTime.format("h:mm:ss [<small>]A[</small>]");
   }
+
+  //Rome
+  let romeElement = document.querySelector("#rome");
+  if (romeElement) {
+    let romeDateElement = romeElement.querySelector(".date");
+    let romeTimeElement = romeElement.querySelector(".time");
+    let romeTime = moment().tz("Europe/Rome");
+
+    romeDateElement.innerHTML = romeTime.format("MMMM Do YYYY");
+    romeTimeElement.innerHTML = romeTime.format("h:mm:ss [<small>]A[</small>]");
+  }
 }
 
 function updateCity(event) {
